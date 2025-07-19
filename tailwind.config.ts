@@ -61,6 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				hawkeye: {
+					gold: 'hsl(var(--hawkeye-gold))',
+					'gold-light': 'hsl(var(--hawkeye-gold-light))',
+					'gold-dark': 'hsl(var(--hawkeye-gold-dark))',
+					black: 'hsl(var(--hawkeye-black))',
+					dark: 'hsl(var(--hawkeye-dark))',
+					gray: 'hsl(var(--hawkeye-gray))',
+					white: 'hsl(var(--hawkeye-white))',
+					red: 'hsl(var(--hawkeye-red))'
 				}
 			},
 			borderRadius: {
@@ -88,7 +98,9 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'marquee': 'marquee 30s linear infinite',
+				'pulse-gold': 'pulse-gold 2s infinite'
 			}
 		}
 	},
