@@ -31,72 +31,84 @@ export const PricingSection = () => {
   }, []);
 
   return (
-    <div className="bg-hawkeye-gold py-16">
+    <div className="bg-gradient-to-b from-hawkeye-gold to-hawkeye-gold-light py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center space-y-8">
+        <div className="max-w-3xl mx-auto text-center space-y-12">
           {/* Price Display */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-center gap-4">
-              <span className="text-5xl lg:text-6xl font-bold text-hawkeye-black">
+          <div className="space-y-6">
+            <div className="flex items-center justify-center gap-6">
+              <span className="text-6xl lg:text-8xl font-display font-bold text-hawkeye-black">
                 ₹ 199
               </span>
-              <span className="text-2xl lg:text-3xl text-hawkeye-black/60 line-through">
+              <span className="text-3xl lg:text-4xl text-hawkeye-black/60 line-through">
                 ₹ 499
               </span>
+            </div>
+            <div className="bg-hawkeye-red text-hawkeye-white px-6 py-2 rounded-full font-bold text-lg inline-block animate-pulse">
+              60% OFF - Limited Time!
             </div>
           </div>
 
           {/* Countdown Timer */}
-          <div className="grid grid-cols-4 gap-4 max-w-md mx-auto">
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-hawkeye-black">
-                {timeLeft.days.toString().padStart(2, '0')}
+          <div className="bg-hawkeye-black/10 rounded-2xl p-8">
+            <h3 className="text-2xl font-display font-bold text-hawkeye-black mb-6">⏰ Event Starts In:</h3>
+            <div className="grid grid-cols-4 gap-6 max-w-lg mx-auto">
+              <div className="text-center bg-hawkeye-black rounded-xl p-4 shadow-lg">
+                <div className="text-4xl lg:text-5xl font-display font-bold text-hawkeye-gold">
+                  {timeLeft.days.toString().padStart(2, '0')}
+                </div>
+                <div className="text-hawkeye-white text-sm uppercase tracking-wide mt-2">
+                  DAYS
+                </div>
               </div>
-              <div className="text-hawkeye-black/70 text-sm uppercase tracking-wide">
-                DAYS
+              <div className="text-center bg-hawkeye-black rounded-xl p-4 shadow-lg">
+                <div className="text-4xl lg:text-5xl font-display font-bold text-hawkeye-gold">
+                  {timeLeft.hours.toString().padStart(2, '0')}
+                </div>
+                <div className="text-hawkeye-white text-sm uppercase tracking-wide mt-2">
+                  HOURS
+                </div>
               </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-hawkeye-black">
-                {timeLeft.hours.toString().padStart(2, '0')}
+              <div className="text-center bg-hawkeye-black rounded-xl p-4 shadow-lg">
+                <div className="text-4xl lg:text-5xl font-display font-bold text-hawkeye-gold">
+                  {timeLeft.minutes.toString().padStart(2, '0')}
+                </div>
+                <div className="text-hawkeye-white text-sm uppercase tracking-wide mt-2">
+                  MINUTES
+                </div>
               </div>
-              <div className="text-hawkeye-black/70 text-sm uppercase tracking-wide">
-                HOURS
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-hawkeye-black">
-                {timeLeft.minutes.toString().padStart(2, '0')}
-              </div>
-              <div className="text-hawkeye-black/70 text-sm uppercase tracking-wide">
-                MINUTES
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-hawkeye-black">
-                {timeLeft.seconds.toString().padStart(2, '0')}
-              </div>
-              <div className="text-hawkeye-black/70 text-sm uppercase tracking-wide">
-                SECONDS
+              <div className="text-center bg-hawkeye-black rounded-xl p-4 shadow-lg">
+                <div className="text-4xl lg:text-5xl font-display font-bold text-hawkeye-gold">
+                  {timeLeft.seconds.toString().padStart(2, '0')}
+                </div>
+                <div className="text-hawkeye-white text-sm uppercase tracking-wide mt-2">
+                  SECONDS
+                </div>
               </div>
             </div>
           </div>
 
           {/* Event Details */}
-          <div className="space-y-2">
-            <h3 className="text-xl font-bold text-hawkeye-black">
-              Sunday, 20th July. 2025, 11am - 2pm
+          <div className="space-y-4">
+            <h3 className="text-2xl font-display font-bold text-hawkeye-black">
+              📅 Sunday, 20th July. 2025, 11am - 2pm
             </h3>
           </div>
 
           {/* Final CTA */}
-          <Button 
-            variant="goldOutline" 
-            className="bg-hawkeye-black text-hawkeye-gold border-hawkeye-black hover:bg-hawkeye-gold hover:text-hawkeye-black text-xl py-6 px-12"
-            onClick={() => window.open("https://hawkeyeacademy.exlyapp.com/checkout/7dadfc1a-479a-4749-b149-1aa9378faab3?compact=true&init_booking=true", "_blank")}
-          >
-            Register Now
-          </Button>
+          <div className="space-y-4">
+            <Button 
+              variant="goldOutline" 
+              size="xl"
+              className="bg-hawkeye-black text-hawkeye-gold border-hawkeye-black hover:bg-hawkeye-gold hover:text-hawkeye-black text-2xl py-8 px-16 font-bold shadow-2xl hover:scale-110 transition-all duration-300"
+              onClick={() => window.open("https://hawkeyeacademy.exlyapp.com/checkout/7dadfc1a-479a-4749-b149-1aa9378faab3?compact=true&init_booking=true", "_blank")}
+            >
+              🚀 Register Now - Secure Your Spot!
+            </Button>
+            <p className="text-hawkeye-black/70 font-semibold">
+              ⚡ Only few seats left! Don't miss out!
+            </p>
+          </div>
         </div>
       </div>
     </div>
