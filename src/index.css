@@ -142,8 +142,17 @@ All colors MUST be HSL.
     100% { transform: translateX(-100%); }
   }
 
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+  }
+
   .animate-marquee {
     animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 25s linear infinite;
   }
 
   /* Pulse animation for CTA */

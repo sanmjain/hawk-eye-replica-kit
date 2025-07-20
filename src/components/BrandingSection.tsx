@@ -1,54 +1,59 @@
-import { Button } from "@/components/ui/button";
-import { Users, Star } from "lucide-react";
+import hariharanWolfie from "@/assets/hariharan-wolfie.jpg";
 
 export const BrandingSection = () => {
   return (
-    <div className="bg-hawkeye-gold py-16">
+    <section className="bg-hawkeye-black py-12 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center space-y-8">
-          <p className="text-hawkeye-black text-xl font-semibold">Brought to you by</p>
-          
-          <div className="flex items-center justify-center gap-8 flex-wrap">
-            <div className="text-hawkeye-black font-display font-bold text-3xl">
-              Finance by Wolfie
-            </div>
-            <div className="w-px h-20 bg-hawkeye-black/20"></div>
-            <div className="text-hawkeye-black font-display font-bold text-3xl">
-              300K+
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-display font-black text-hawkeye-gold mb-4">
+            BROUGHT TO YOU BY
+          </h2>
+          <div className="w-24 md:w-32 h-1 bg-hawkeye-gold mx-auto rounded-full"></div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Left: Company Info */}
+          <div className="space-y-6 md:space-y-8">
+            <div className="bg-hawkeye-gold/10 border border-hawkeye-gold/30 rounded-2xl p-6 md:p-8">
+              <div className="text-4xl md:text-6xl font-display font-black text-hawkeye-gold mb-4">
+                HAWKEYE
+              </div>
+              <p className="text-hawkeye-white text-lg md:text-xl font-bold mb-4">
+                Tamil Nadu's #1 Finance & Trading Community
+              </p>
+              <div className="grid grid-cols-2 gap-4 md:gap-6 text-center">
+                <div className="bg-hawkeye-gold/20 rounded-xl p-4">
+                  <div className="text-2xl md:text-3xl font-black text-hawkeye-gold">600K+</div>
+                  <div className="text-hawkeye-gray text-sm">Community Members</div>
+                </div>
+                <div className="bg-hawkeye-gold/20 rounded-xl p-4">
+                  <div className="text-2xl md:text-3xl font-black text-hawkeye-gold">2L+</div>
+                  <div className="text-hawkeye-gray text-sm">Students Enrolled</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
-            <div className="text-center space-y-4 group hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-16 h-16 bg-hawkeye-black/20 rounded-full flex items-center justify-center group-hover:bg-hawkeye-black/30 transition-colors">
-                  <Users className="w-10 h-10 text-hawkeye-black" />
-                </div>
+          {/* Right: Founder Photo */}
+          <div className="text-center">
+            <div className="relative inline-block">
+              <img 
+                src={hariharanWolfie} 
+                alt="Hariharan - Founder of HawkEye"
+                className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-2 border-hawkeye-gold shadow-2xl mx-auto"
+              />
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-hawkeye-gold text-hawkeye-black px-4 py-2 md:px-6 md:py-3 rounded-xl font-black text-sm md:text-base border-2 border-hawkeye-gold-dark">
+                Hariharan K - Founder & CEO
               </div>
-              <h3 className="text-4xl font-display font-bold text-hawkeye-black">2,00,000+</h3>
-              <p className="text-hawkeye-black font-semibold text-lg">Students Enrolled</p>
             </div>
-            
-            <div className="text-center space-y-4 group hover:scale-105 transition-transform duration-300">
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-16 h-16 bg-hawkeye-black/20 rounded-full flex items-center justify-center group-hover:bg-hawkeye-black/30 transition-colors">
-                  <Star className="w-10 h-10 text-hawkeye-black fill-current" />
-                </div>
-              </div>
-              <h3 className="text-4xl font-display font-bold text-hawkeye-black">4.87/5</h3>
-              <p className="text-hawkeye-black font-semibold text-lg">Average Ratings</p>
-            </div>
+            <p className="text-hawkeye-gray text-sm md:text-base mt-8 max-w-md mx-auto leading-relaxed">
+              Empowering individuals with practical financial education and proven wealth-building strategies
+            </p>
           </div>
-
-          <Button 
-            variant="goldOutline" 
-            className="bg-hawkeye-black text-hawkeye-gold border-hawkeye-black hover:bg-hawkeye-gold hover:text-hawkeye-black"
-            onClick={() => window.open("https://hawkeyeacademy.exlyapp.com/checkout/7dadfc1a-479a-4749-b149-1aa9378faab3?compact=true&init_booking=true", "_blank")}
-          >
-            Register Now
-          </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
