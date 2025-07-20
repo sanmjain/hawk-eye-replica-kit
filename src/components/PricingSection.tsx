@@ -31,7 +31,7 @@ export const PricingSection = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-b from-hawkeye-gold to-hawkeye-gold-light py-20">
+    <div className="bg-hawkeye-gold py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-12">
           {/* Price Display */}
@@ -91,19 +91,17 @@ export const PricingSection = () => {
           {/* Event Details */}
           <div className="space-y-4">
             <h3 className="text-2xl font-display font-bold text-hawkeye-black">
-              📅 Sunday, 20th July. 2025, 11am - 2pm
+              📅 Sunday, 3rd August 2025, 11am - 2pm
             </h3>
           </div>
 
           {/* Final CTA */}
           <div className="space-y-4">
             <Button 
-              variant="goldOutline" 
-              size="xl"
-              className="bg-hawkeye-black text-hawkeye-gold border-hawkeye-black hover:bg-hawkeye-gold hover:text-hawkeye-black text-2xl py-8 px-16 font-bold shadow-2xl hover:scale-110 transition-all duration-300"
+              className="bg-blue-600 text-white hover:bg-blue-700 text-2xl py-8 px-16 font-bold shadow-2xl hover:scale-110 transition-all duration-300 rounded-lg"
               onClick={() => window.open("https://hawkeyeacademy.exlyapp.com/checkout/7dadfc1a-479a-4749-b149-1aa9378faab3?compact=true&init_booking=true", "_blank")}
             >
-              🚀 Register Now - Secure Your Spot!
+              Register Now
             </Button>
             <p className="text-hawkeye-black/70 font-semibold">
               ⚡ Only few seats left! Don't miss out!
