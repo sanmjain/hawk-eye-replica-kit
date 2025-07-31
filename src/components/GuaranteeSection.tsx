@@ -11,13 +11,13 @@ export const GuaranteeSection = () => {
           </div>
           
           <div className="space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-hawkeye-gold">
+            <h2 className="text-3xl lg:text-4xl font-bold text-hawkeye-gold" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               100% Money Back Guarantee
             </h2>
-            <p className="text-hawkeye-white text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-hawkeye-white text-lg leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               If you are unhappy with the webinar because we couldn't teach you anything new you may claim our{" "}
-              <span className="font-bold text-hawkeye-gold">100% money back guarantee</span> and get a full refund{" "}
-              <span className="font-bold text-hawkeye-gold">within 7 days of your purchase</span> as per our Refund Policy.
+              <span className="font-bold text-hawkeye-gold" style={{ fontFamily: 'Montserrat, sans-serif' }}>100% money back guarantee</span> and get a full refund{" "}
+              <span className="font-bold text-hawkeye-gold" style={{ fontFamily: 'Montserrat, sans-serif' }}>within 7 days of your purchase</span> as per our Refund Policy.
             </p>
           </div>
 

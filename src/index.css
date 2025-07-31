@@ -109,6 +109,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', sans-serif;
   }
 
   /* Custom utility classes for HawkEye */
@@ -164,4 +165,34 @@ All colors MUST be HSL.
   .animate-pulse-gold {
     animation: pulse-gold 2s infinite;
   }
+
+  @keyframes bounce-y {
+    0%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-8px); }
+    40% { transform: translateY(0); }
+    60% { transform: translateY(6px); }
+    80% { transform: translateY(0); }
+  }
+  .animate-bounce-y {
+    animation: bounce-y 1.2s infinite cubic-bezier(0.4,0,0.6,1);
+  }
+}
+
+/* StickyFooterBar price glow animation */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 8px #ffe066, 0 0 16px #ffd600;
+    filter: brightness(1.1);
+  }
+  50% {
+    box-shadow: 0 0 24px #ffd600, 0 0 48px #ffe066;
+    filter: brightness(1.25);
+  }
+  100% {
+    box-shadow: 0 0 8px #ffe066, 0 0 16px #ffd600;
+    filter: brightness(1.1);
+  }
+}
+.animate-glow-pulse {
+  animation: glow-pulse 1.2s infinite alternate;
 }
